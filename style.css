@@ -1,0 +1,45 @@
+/* Основные переменные (сокращённые) */
+:root {
+    --p-pink: #ffb6c1;
+    --s-pink: #ff8fab;
+    --a-purple: #c9b2ff;
+    --l-bg: #fff9fb;
+    --t-dark: #5a4a6a;
+    --t-light: #8a7a9a;
+    --sh: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --r: 25px;
+    --trans: all 0.3s ease;
+}
+
+/* Общие стили */
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--l-bg);
+    color: var(--t-dark);
+    line-height: 1.6;
+}
+.container {
+    max-width: 1200px; margin: 0 auto; padding: 0 20px;
+}
+
+/* ШАПКА */
+#header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: #fff; box-shadow: var(--sh);
+    padding: 15px 40px; display: flex; align-items: center; justify-content: space-between;
+}
+.logo {
+    display: flex; align-items: center; gap: 15px;
+}
+.nav-link {
+    text-decoration: none; color: var(--t-dark);
+    padding: 10px 20px; border-radius: var(--r);
+    font-weight: 500; font-size: 14px; transition: var(--trans);
+}
+.nav-link:hover,
+.nav-link.active {
+    background: var(--s-pink); color: #fff;
+}
