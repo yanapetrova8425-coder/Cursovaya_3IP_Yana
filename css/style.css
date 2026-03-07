@@ -1,4 +1,4 @@
-/* Основные переменные (сокращённые) */
+
 :root {
     --p-pink: #ffb6c1;
     --s-pink: #ff8fab;
@@ -11,7 +11,6 @@
     --trans: all 0.3s ease;
 }
 
-/* Общие стили */
 * {
     margin: 0; padding: 0; box-sizing: border-box;
 }
