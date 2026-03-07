@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neonka | Салон красоты</title>
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="style.css">
+    <title>Neonka | Салон красоты премиум-класса</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Фон -->
+    <!-- Фоновые декорации -->
     <div class="bg-decorations">
         <div class="bg-element bg-1"></div>
         <div class="bg-element bg-2"></div>
@@ -16,7 +16,7 @@
         <div class="bg-element bg-4"></div>
     </div>
     
-    <!-- шапка сайта -->
+    <!-- ШАПКА САЙТА -->
     <header id="header">
         <div class="logo">
             <i class="fas fa-spa logo-icon"></i>
@@ -29,16 +29,15 @@
         <nav class="nav">
             <a href="#home" class="nav-link active"><i class="fas fa-home"></i><span>Главная</span></a>
             <a href="#services" class="nav-link"><i class="fas fa-star"></i><span>Услуги</span></a>
-            <a href="#gallery" class="nav-link"><i class="fas fa-images"></i><span>Наши работы</span></a>
+            <a href="#gallery" class="nav-link"><i class="fas fa-images"></i><span>Галерея</span></a>
             <a href="#contacts" class="nav-link"><i class="fas fa-map-marker-alt"></i><span>Контакты</span></a>
-            <a href="#otzv" class="nav-link"><i class="fas fa-images"></i><span>Отзывы</span></a>
         </nav>
         
         <div class="header-right">
             <div class="header-contact">
                 <i class="fas fa-phone-alt phone-icon"></i>
                 <div>
-                    <div class="phone-number">+7 (952) 029-51-18</div>
+                    <div class="phone-number">+7 (812) 333-22-11</div>
                     <div class="work-hours">9:00 - 21:00</div>
                 </div>
             </div>
@@ -50,11 +49,11 @@
         </div>
     </header>
 
-    <!--содержимое -->
+    <!-- ОСНОВНОЕ СОДЕРЖИМОЕ -->
     <main class="main-content">
         <div class="container">
-            <!--приветсвие -->
-            <section class="welcome-section">
+            <!-- Приветственная секция -->
+            <section class="welcome-section" id="home">
                 <div class="welcome-text">
                     <h2 class="welcome-title">
                         <span class="title-line">Добро пожаловать в</span>
@@ -91,23 +90,22 @@
                 </div>
                 
                 <div class="welcome-image">
-                    <img src="#" alt="Салон красоты">
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Салон красоты">
                     <div class="image-badge">
                         <i class="fas fa-crown"></i>
-                        Лучший салон 2025-2026
+                        Лучший салон 2026
                     </div>
                 </div>
             </section>
 
-            <!-- галерея работ -->
-            <section class="photos-section">
+            <!-- Галерея работ -->
+            <section class="photos-section" id="gallery">
                 <h3 class="photos-title">Наши лучшие работы</h3>
                 
                 <div class="photos-grid">
-                    <!-- Фото 1 -->
                     <div class="photo-card">
                         <div class="photo-wrapper">
-                            <img src="#" alt="Парикмахерские услуги">
+                            <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Парикмахерские услуги">
                         </div>
                         <div class="photo-text">
                             <h4>Идеальные стрижки</h4>
@@ -115,26 +113,46 @@
                         </div>
                     </div>
                     
-                    <!-- Фото 2 -->
                     <div class="photo-card">
                         <div class="photo-wrapper">
-                            <img src="#" alt="Маникюр">
+                            <img src="https://images.unsplash.com/photo-1607779097330-9b6b0956d76b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Маникюр">
                         </div>
                         <div class="photo-text">
                             <h4>Идеальный маникюр</h4>
                             <p>Используем только профессиональные материалы от ведущих брендов.</p>
                         </div>
                     </div>
-                    
-                    <!-- Фото 3 -->
+
                     <div class="photo-card">
                         <div class="photo-wrapper">
-                            <img src="#" alt="Косметология">
+                            <img src="https://images.unsplash.com/photo-1540555700478-4be289de5bfb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Косметология">
                         </div>
                         <div class="photo-text">
                             <h4>Уход за кожей</h4>
                             <p>Индивидуальный подбор процедур для вашего типа кожи.</p>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Услуги -->
+            <section class="services-section" id="services">
+                <h3 class="photos-title">Наши услуги</h3>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-cut service-icon"></i>
+                        <h4>Стрижка и укладка</h4>
+                        <p>от 1500₽</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-hand-sparkles service-icon"></i>
+                        <h4>Маникюр</h4>
+                        <p>от 1200₽</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-magic service-icon"></i>
+                        <h4>Косметология</h4>
+                        <p>от 2500₽</p>
                     </div>
                 </div>
             </section>
@@ -159,8 +177,8 @@
         </button>
     </div>
 
-    <!-- информация -->
-    <footer id="footer">
+    <!-- ФУТЕР -->
+    <footer id="contacts">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
@@ -168,7 +186,7 @@
                         <i class="fas fa-spa"></i>
                         <h3>NEONKA</h3>
                     </div>
-                    <p>Создаем красоту с 2026 года. Ваше доверие - наша лучшая награда.</p>
+                    <p>Создаем красоту с 2019 года. Ваше доверие - наша лучшая награда.</p>
                     <div class="social-icons">
                         <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="social-icon vk"><i class="fab fa-vk"></i></a>
@@ -180,19 +198,19 @@
                     <h4>Адрес</h4>
                     <div class="address">
                         <i class="fas fa-map-marker-alt"></i>
-                        <p>Шумерля, Карла-Маркса д-15.</p>
+                        <p>Санкт-Петербург, Невский пр-т, 100</p>
                     </div>
                     <div class="metro">
                         <i class="fas fa-subway"></i>
-                        <p>Приходите</p>
+                        <p>м. Невский проспект</p>
                     </div>
                 </div>
                 
                 <div class="footer-section">
                     <h4>Контакты</h4>
-                    <a href="tel:+79520295118" class="footer-phone">
+                    <a href="tel:+78123332211" class="footer-phone">
                         <i class="fas fa-phone"></i>
-                        +7 (952) 029-51-18
+                        +7 (812) 333-22-11
                     </a>
                     <button class="btn btn-outline footer-btn" id="footerBooking">
                         <i class="fas fa-calendar-check"></i>
@@ -202,12 +220,12 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 Салон красоты "Neonka". Все права защищены.</p>
+                <p>&copy; 2026 Салон красоты "Neonka". Все права защищены.</p>
             </div>
         </div>
     </footer>
 
-    <!-- окно записи-->
+    <!-- МОДАЛЬНОЕ ОКНО ЗАПИСИ -->
     <div class="modal-overlay" id="bookingModal">
         <div class="modal-content booking-modal">
             <div class="modal-header">
@@ -254,6 +272,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
