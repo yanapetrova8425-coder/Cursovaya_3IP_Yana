@@ -159,10 +159,14 @@ body {
 }
 
 .title-highlight {
-    background: linear-gradient(135deg, var(--pink-dark), var(--purple));
+    background: linear-gradient(135deg, #c08497, #e8b4b8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+    position: relative;
 }
+
 
 .welcome-description {
     font-size: 18px;
@@ -422,6 +426,8 @@ body {
 }
 
 /* АДАПТИВНОСТЬ */
+ /* адаптивность хорошая */
+
 @media (max-width: 1200px) {
     .welcome-section { flex-direction: column; }
     .footer-content { grid-template-columns: repeat(2,1fr); }
