@@ -1,6 +1,29 @@
 
 
 
+
+
+
+
+
+
+
+
+
+// Здесь еще не все подкаректированно!!!   <====только набросок
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ===== ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ =====
 const header = document.getElementById('header');
 const bookingModal = document.getElementById('bookingModal');
@@ -20,9 +43,9 @@ function init() {
     setTodayAsMinDate();
 }
 
-// ===== НАСТРОЙКА ОБРАБОТЧИКОВ СОБЫТИЙ =====
+// =====  СОБЫТИЯ =====
 function setupEventListeners() {
-    // Обработчик скролла для шапки
+  
     window.addEventListener('scroll', handleScroll);
     
     // Обработчики для модального окна записи
@@ -158,14 +181,13 @@ async function handleBookingSubmit(e) {
         return;
     }
     
-    // Здесь должна быть отправка данных на сервер
-    // В демо-режиме просто показываем уведомление
+ 
     showNotification('Заявка успешно отправлена! Мы свяжемся с вами в течение 15 минут.', 'success');
     
     // Закрываем модальное окно
     closeBookingModal();
     
-    // Сбрасываем форму
+    // Сбрасываю форму
     bookingForm.reset();
 }
 
@@ -176,12 +198,12 @@ function validateFormData(data) {
         return false;
     }
     
-    // Проверка телефона
-    const phoneRegex = /^\+7\s?\(?\d{3}\)?\s?\d{3}-\d{2}-\d{2}$/;
-    if (!phoneRegex.test(data.phone)) {
-        showNotification('Введите корректный номер телефона', 'error');
-        return false;
-    }
+    //проверка телефона
+  if (!data.phone || !data.phone.includes('+7')) {
+    showNotification('Введите телефон с +7', 'error');
+    return false;
+}
+
     
     // Проверка выбранной услуги
     if (!data.service) {
@@ -213,7 +235,7 @@ function scrollToTop() {
 
 // ===== ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ =====
 function showNotification(message, type) {
-    // Создаем элемент уведомления
+    // Создаю элемент уведомления
     const notification = document.createElement('div');
     notification.className = `notification ${type}`;
     notification.innerHTML = `
@@ -223,7 +245,7 @@ function showNotification(message, type) {
         </div>
     `;
     
-    // Добавляем стили
+    // Добавляюстили
     notification.style.cssText = `
         position: fixed;
         top: 20px;
@@ -249,13 +271,13 @@ function showNotification(message, type) {
     // Добавляем на страницу
     document.body.appendChild(notification);
     
-    // Удаляем через 5 секунд
+    // Удаляю через 5 секунд
     setTimeout(() => {
         notification.style.animation = 'slideOut 0.3s ease';
         setTimeout(() => notification.remove(), 300);
     }, 5000);
     
-    // Добавляем ключевые кадры для анимации
+    // Добавляю  ключевые кадры для анимации
     if (!document.getElementById('notification-styles')) {
         const style = document.createElement('style');
         style.id = 'notification-styles';
