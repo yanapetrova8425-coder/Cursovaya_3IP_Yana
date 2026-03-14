@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!-- Моя вторая страница проекта -->
+<html lang="ru">
+<head>
+    <!-- Мета-теги для SEO и мобильных -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | Neonka - Салон красоты</title>
+    
+    <!-- Подключаю иконки -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Мой основной CSS файл -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Декоративные фоны -->
+    <div class="bg-decorations">
+        <div class="bg-element bg-1"></div>
+        <div class="bg-element bg-2"></div>
+        <div class="bg-element bg-3"></div>
+        <div class="bg-element bg-4"></div>
+    </div>
+    
+    <!-- Фиксированная шапка сайта -->
+    <header id="header">
+        <div class="container">
+            <!-- Логотип -->
+            <div class="logo">
+                <i class="fas fa-spa logo-icon"></i>
+                <div class="logo-text">
+                    <h1>NEONKA</h1>
+                    <p>Салон красоты</p>
+                </div>
+            </div>
+            
+            <!-- Навигационное меню -->
+            <nav class="nav"> 
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i><span>Главная</span>
+                </a>
+                <a href="index.html#services" class="nav-link">
+                    <i class="fas fa-star"></i><span>Услуги</span>
+                </a>
+                <a href="index.html#gallery" class="nav-link">
+                    <i class="fas fa-images"></i><span>Наши работы</span>
+                </a>
+                <!-- Текущая страница активна -->
+                <a href="contacts.html" class="nav-link active">
+                    <i class="fas fa-map-marker-alt"></i><span>Контакты</span>
+                </a>
+            </nav>
+            
+            <!-- Контакты и кнопка записи -->
+            <div class="header-right">
+                <div class="header-contact">
+                    <i class="fas fa-phone-alt phone-icon"></i>
+                    <div class="work-hours">9:00 - 21:00</div>
+                </div>
+                <button class="btn btn-primary header-btn" id="quickBooking">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Быстрая запись</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Контактная секция -->
+            <section class="contacts-section" id="contacts-tab">
+                <h3 class="section-title">Наши контакты</h3>
+                
+                <div class="contacts-wrapper">
+                    <!-- Информация о салоне -->
+                    <div class="contacts-info">
+                        <!-- Адрес -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Адрес салона</h4>
+                                <p>г. Шумерля, Карла-Маркса д-15</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Телефон -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Телефон</h4>
+                                <a href="tel:+79520295118" class="contact-link">+7 (952) 029-51-18</a>
+                            </div>
+                        </div>
+                        
+                        <!-- График работы -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>График работы</h4>
+                                <p>Пн-Вс: 9:00 - 21:00</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Электронная почта -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <a href="mailto:neonka.salon@mail.ru" class="contact-link">neonka.salon@mail.ru</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Форма обратной связи -->
+                    <div class="contacts-form">
+                        <h4>Напишите нам</h4>
+                        <form class="quick-form" id="quickContactForm">
+                            <div class="form-group">
+                                <input type="text" id="contactName" placeholder="Ваше имя" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="contactPhone" placeholder="+7 (___) ___-__-__" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="contactMessage" placeholder="Ваше сообщение" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <i class="fas fa-paper-plane"></i> Отправить сообщение
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Плавающие кнопки -->
+    <div class="floating-buttons">
+        <button class="floating-btn booking-btn" id="floatingBooking">
+            <i class="fas fa-calendar-alt"></i>
+            <span class="btn-text">Запись</span>
+        </button>
+        <a href="tel:+79520295118" class="floating-btn call-btn">
+            <i class="fas fa-phone"></i>
+            <span class="btn-text">Позвонить</span>
+        </a>
+        <button class="floating-btn top-btn" id="scrollTop">
+            <i class="fas fa-chevron-up"></i>
+            <span class="btn-text">Наверх</span>
+        </button>
+    </div>
+
+    <!-- Футер -->
+    <footer id="contacts">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-spa"></i>
+                        <h3>NEONKA</h3>
+                    </div>
+                    <p>Создаем красоту с 2024. Ваше доверие - наша награда.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon vk"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-icon telegram"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Адрес</h4>
+                    <div class="address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Шумерля, Карла-Маркса д-15</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <a href="tel:+79520295118" class="footer-phone mb-3 d-block">
+                        <i class="fas fa-phone me-2"></i>+7 (952) 029-51-18
+                    </a>
+                    <button class="btn btn-outline footer-btn w-100" id="footerBooking">
+                        <i class="fas fa-calendar-check me-2"></i>Записаться онлайн
+                    </button>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2026</span> Салон красоты "Neonka". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно записи -->
+    <div class="modal-overlay" id="bookingModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-calendar-alt me-2"></i>Онлайн запись</h3>
+                <button class="close-modal" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form class="booking-form" id="bookingForm">
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="name" placeholder="Анна Иванова" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-phone"></i>
+                            <input type="tel" id="phone" placeholder="+7 (952) 029-51-18" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Услуга</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-cut"></i>
+                            <select id="service" required>
+                                <option value="">Выберите услугу</option>
+                                <option value="haircut">Женская стрижка</option>
+                                <option value="manicure">Маникюр</option>
+                                <option value="cosmetology">Косметология</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-paper-plane"></i> Отправить заявку
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подключаю мой JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
