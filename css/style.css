@@ -136,6 +136,51 @@ body {
     transform: translateY(-2px);
 }
 
+
+/* ФОРМА */
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-light);
+    z-index: 1;
+}
+
+.input-with-icon input,
+.input-with-icon select {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    border: 2px solid rgba(255,182,193,0.3);
+    border-radius: 15px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    background: white;
+}
+
+.input-with-icon input:focus,
+.input-with-icon select:focus {
+    outline: none;
+    border-color: var(--pink-dark);
+}
+
 /* ОСНОВНОЕ СОДЕРЖИМОЕ */
 .main-content {
     margin-top: 100px;
@@ -339,6 +384,38 @@ body {
     transform: scale(1.1);
 }
 
+/* УВЕДОМЛЕНИЯ */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: white;
+    z-index: 9999;
+    max-width: 400px;
+    box-shadow: var(--shadow);
+    animation: slideIn 0.3s ease;
+}
+
+.notification.success {
+    background: #4CAF50;
+}
+
+.notification.error {
+    background: #f44336;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 /* ФУТЕР */
 footer {
     background: #f8f4ff;
@@ -464,82 +541,7 @@ footer {
     padding: 25px;
 }
 
-/* ФОРМА */
-.booking-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
 
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 500;
-    color: var(--text);
-}
-
-.input-with-icon {
-    position: relative;
-}
-
-.input-with-icon i {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--text-light);
-    z-index: 1;
-}
-
-.input-with-icon input,
-.input-with-icon select {
-    width: 100%;
-    padding: 15px 15px 15px 45px;
-    border: 2px solid rgba(255,182,193,0.3);
-    border-radius: 15px;
-    font-size: 16px;
-    transition: border-color 0.3s;
-    background: white;
-}
-
-.input-with-icon input:focus,
-.input-with-icon select:focus {
-    outline: none;
-    border-color: var(--pink-dark);
-}
-
-/* УВЕДОМЛЕНИЯ */
-.notification {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 15px 20px;
-    border-radius: 10px;
-    color: white;
-    z-index: 9999;
-    max-width: 400px;
-    box-shadow: var(--shadow);
-    animation: slideIn 0.3s ease;
-}
-
-.notification.success {
-    background: #4CAF50;
-}
-
-.notification.error {
-    background: #f44336;
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
 
 /* АДАПТИВ */
 @media (max-width: 1200px) {
