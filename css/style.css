@@ -214,3 +214,310 @@ body {
     gap: 8px;
     font-weight: 600;
 }
+
+/* ГАЛЕРЕЯ */
+.photos-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text);
+}
+
+.photos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.photo-card {
+    background: white;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.photo-card:hover {
+    transform: translateY(-5px);
+}
+
+.photo-wrapper {
+    height: 250px;
+    overflow: hidden;
+}
+
+.photo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.photo-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+.photo-text {
+    padding: 25px;
+}
+
+/* УСЛУГИ */
+.services-grid {
+    margin-top: 2rem;
+}
+
+.service-card {
+    background: white;
+    padding: 40px 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: all 0.3s;
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-icon {
+    font-size: 48px;
+    color: var(--pink-dark);
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--pink-dark);
+    margin-top: 10px;
+}
+
+/* ПЛАВАЮЩИЕ КНОПКИ */
+.floating-buttons {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.floating-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.floating-btn i {
+    font-size: 22px;
+}
+
+.booking-btn {
+    background: var(--pink-dark);
+}
+
+.call-btn {
+    background: #26a6ff;
+}
+
+.top-btn {
+    background: #ffb347;
+}
+
+.floating-btn:hover {
+    transform: scale(1.1);
+}
+
+/* ФУТЕР */
+footer {
+    background: #f8f4ff;
+    padding: 60px 0 30px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.footer-logo i {
+    font-size: 2rem;
+    color: var(--pink-dark);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.social-icon.instagram { background: #833AB4; }
+.social-icon.vk { background: #4C75A3; }
+.social-icon.telegram { background: #0088cc; }
+
+.footer-phone {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,182,193,0.1);
+    color: var(--text-light);
+}
+
+/* МОДАЛКА */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: white;
+    border-radius: var(--radius);
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    padding: 25px;
+    border-bottom: 1px solid rgba(255,182,193,0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h3 {
+    margin: 0;
+    color: var(--text);
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: var(--text-light);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-body {
+    padding: 25px;
+}
+
+/* ФОРМА */
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-light);
+    z-index: 1;
+}
+
+.input-with-icon input,
+.input-with-icon select {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    border: 2px solid rgba(255,182,193,0.3);
+    border-radius: 15px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    background: white;
+}
+
+.input-with-icon input:focus,
+.input-with-icon select:focus {
+    outline: none;
+    border-color: var(--pink-dark);
+}
+
+/* УВЕДОМЛЕНИЯ */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: white;
+    z-index: 9999;
+    max-width: 400px;
+    box-shadow: var(--shadow);
+    animation: slideIn 0.3s ease;
+}
