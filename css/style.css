@@ -426,7 +426,7 @@ body {
 }
 
 /* АДАПТИВНОСТЬ */
- /* адаптивность хорошая */
+ /* адаптивность хорошая (в скоре дополню для полного проекта ) */
 
 @media (max-width: 1200px) {
     .welcome-section { flex-direction: column; }
@@ -438,14 +438,3 @@ body {
     .nav { display: none; }
 }
 
-@media (max-width: 768px) {
-    .photos-grid { grid-template-columns: 1fr; }
-    .main-content { margin-top: 130px; }
-    .welcome-title { font-size: 32px; }
-    .welcome-features { flex-direction: column; }
-}
-
-@media (max-width: 576px) {
-    .footer-content { grid-template-columns: 1fr; }
-    .floating-buttons { bottom: 20px; right: 20px; }
-}
