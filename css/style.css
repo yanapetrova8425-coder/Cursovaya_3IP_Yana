@@ -10,3 +10,77 @@
     --radius: 25px;
 }
 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ШАПКА */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: white;
+    box-shadow: var(--shadow);
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header.scrolled {
+    padding: 10px 40px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-icon {
+    font-size: 32px;
+    color: var(--pink-dark);
+}
+
+.logo-text h1 {
+    font-size: 24px;
+}
+
+.logo-text p {
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+.nav {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text);
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
